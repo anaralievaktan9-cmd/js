@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1300px;
+  margin: auto;
+}
+
+.header {
+  margin: 20px auto;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 190px;
+  margin: auto;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+a {
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+}
+a:hover {
+  color: #d2b574;
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+.baner {
+  background-image: url(./png/gold2.png);
+  background-size: cover;
+  height: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.baner h1 {
+  color: white;
+  font-size: 100px;
+}
+
+.banner button {
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 5px 20px;
+  width: 212px;
+  margin-top: 100px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 290px 290px;
+  margin: 100px auto;
+  grid-gap: 10px;
+}
+
+.item1 {
+    grid-row: span 2;
+  background-image: url(./png/gold3.png);
+  background-size: cover;
+  
+}
+
+.item2 {
+  background-image: url(./png/gold3.png);
+  background-size: cover;
+}
+.item3 {
+  background-image: url(./png/gold3.png);
+  background-size: cover;
+}
+.item4 {
+  background-image: url(./png/gold3.png);
+  background-size: cover;
+}
+.item5 {
+  background-image: url(./png/gold3.png);
+  background-size: cover;
+}
