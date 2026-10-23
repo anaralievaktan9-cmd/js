@@ -1,8 +1,41 @@
+/* =========================================================
+   VARIABLES & RESET
+   ========================================================= */
+:root {
+  --gold: #c9a85c;
+  --ink: #1a1a1a;
+  --dark: #2a2a2a;
+  --red: #b8323b;
+  --font: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: var(--font);
+  background: #fff;
+  color: var(--ink);
+}
+
+a {
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d2b574;
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 .container {
   width: 1300px;
   margin: auto;
@@ -36,17 +69,9 @@
   margin: 20px auto;
 }
 
-a {
-  color: black;
-  font-size: 24px;
-  text-decoration: none;
-}
-a:hover {
-  color: #d2b574;
-  transform: scale(1.1);
-  transition: all 0.3s;
-}
-
+/* =========================================================
+   BANNER
+   ========================================================= */
 .baner {
   background-image: url(./png/gold2.png);
   background-size: cover;
@@ -62,16 +87,19 @@ a:hover {
   font-size: 100px;
 }
 
-.banner button {
+.baner button {
   background-color: black;
   color: white;
   font-size: 24px;
   border: none;
-  padding: 5px 20px;
+  padding: 15px 40px;
   width: 212px;
   margin-top: 100px;
 }
 
+/* =========================================================
+   MAIN GRID (item1 ... item5)
+   ========================================================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -81,25 +109,858 @@ a:hover {
 }
 
 .item1 {
-    grid-row: span 2;
-  background-image: url(./png/gold3.png);
+  grid-row: span 2;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHjfStVuqFpnJ3wy9K509C3-yLjY4fY4RZoEP_iJpsiQ&s=10);
   background-size: cover;
-  
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 30px 30px;
+  font-family: "Playfair Display", Georgia, serif;
+  color: #333;
+}
+
+.item1 p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.item1 .title {
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  margin-top: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.item1 button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px 0;
+  background: #c9a45c;
+  color: #fff;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.item1 button:hover {
+  background: white;
 }
 
 .item2 {
   background-image: url(./png/gold3.png);
   background-size: cover;
 }
+
 .item3 {
-  background-image: url(./png/gold3.png);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMeCXF9OFcWcfdE2k2CKnZqrubeTa3fX2PLRfN82ORw&s=10);
   background-size: cover;
 }
+
 .item4 {
-  background-image: url(./png/gold3.png);
+  background-image: url(https://zoloto55.ru/upload/cssinliner_webp/medialibrary/0e3/cbd9de5k66i21ubrznm5widnj8iq3uzm.webp);
+  background-size: cover;
+  background-position: center;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  font-family: "Playfair Display", Georgia, serif;
+  color: #222;
+}
+
+.item4 p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  color: white;
+}
+
+.item4 .title {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.item5 {
+  background-image: url(https://diamantjewelry.com.ua/media/post/image/f/i/file_4.jpg);
   background-size: cover;
 }
-.item5 {
-  background-image: url(./png/gold3.png);
+
+/* =========================================================
+   ASIDE + PRODUCTS + CART
+   ========================================================= */
+aside {
+  margin: 100px auto;
+  color: #d2b574;
+  font-size: 30px;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products button:hover {
+  background: #000000;
+  color: #c9a24d;
+}
+
+.cart {
+  width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.cart img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.cart h3 {
+  margin: 0;
+  color: #c9a24d;
+  font-weight: 400;
+}
+
+.cart p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.cart button {
+  padding: 10px 28px;
+  background: #c9a24d;
+  color: #fff;
+  border: none;
+}
+
+.cart button:hover {
+  background: #000000;
+  color: #c9a24d;
+}
+
+.cart:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+.features {
+  background-image: url(./png/1614782138_108-p-svadebnii-fon-120.png);
+  background-color: rgb(207, 204, 204);
+  padding: 40px 20px 50px;
+  color: #fff;
+  text-align: center;
+}
+
+.features h2 {
+  margin: 0 0 40px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.features-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature svg {
+  width: 38px;
+  height: 38px;
+  fill: none;
+  stroke: #c9a45c;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feature h3 {
+  margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.feature p {
+  margin: 0;
+  max-width: 250px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   OLD BLOCK: .help  (card rules scoped so they don't clash)
+   ========================================================= */
+.help {
+  max-width: 1000px;
+  margin: 100px auto 0;
+  text-align: center;
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+}
+
+.help__title {
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #d4b46a;
+}
+
+.help__tag {
+  margin-top: 22px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.help__grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.help__grid .card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.help__grid .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.help__grid .card__title {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.help__grid .card__text {
+  font-size: 11px;
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+/* =========================================================
+   OLD BLOCK: .services  (card/btn rules scoped)
+   ========================================================= */
+.services {
+  max-width: 1100px;
+  margin: 70px auto 0;
+  padding: 40px 20px 60px;
+  text-align: center;
+}
+
+.services__title {
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.services__subtitle {
+  margin-top: 22px;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+
+.cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.cards .card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards .card--shadow {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.cards .card__img {
+  width: 100%;
+  aspect-ratio: 324 / 180;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(135deg, #e6e6e6, #c9c9c9);
+}
+
+.cards .card__title {
+  margin-top: 18px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.cards .card__text {
+  margin-top: 14px;
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 1.35;
+  min-height: 2.7em;
+}
+
+.cards .btn {
+  margin: 24px 0;
+  display: inline-block;
+  padding: 8px 22px;
+  min-width: 118px;
+  font-family: var(--font);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  text-decoration: none;
+  background: var(--gold);
+  transition: filter 0.2s;
+}
+
+.cards .btn:hover {
+  filter: brightness(0.92);
+}
+
+.cards .btn:focus-visible {
+  outline: 2px solid var(--dark);
+  outline-offset: 3px;
+}
+
+.cards .btn--dark {
+  background: var(--dark);
+}
+
+/* =========================================================
+   GOLD PRODUCTS
+   ========================================================= */
+.gold {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px 20px;
+  margin-top: 250px;
+  margin-bottom: 300px;
+}
+
+.gold .gold-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gold .gold-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+}
+
+.gold-card h3 {
+  margin: 4px 0;
+  color: #c9a24d;
+  font-weight: 400;
+}
+
+.gold-card p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 30px 40px;
+  background: #2c2c2c;
+  color: #fff;
+  margin: 100px 0;
+}
+
+.col {
+  text-align: center;
+}
+
+.col h4 {
+  color: #d6b66e;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 20px);
+  gap: 12px 40px;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #858585;
+  color: #2c2c2c;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 2;
+  color: #ddd;
+}
+
+.inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.inputs input {
+  width: 120px;
+  padding: 6px;
+  font-size: 11px;
+  background: transparent;
+  border: 1px solid #777;
+  color: #fff;
+}
+
+.col button {
+  display: block;
+  width: 200px;
+  margin: 20px auto 0;
+  padding: 8px;
+  background: #d1b36f;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.inputs input,
+.col button {
+  font-family: inherit;
+}
+
+/* =========================================================
+   CART ICON + MODAL
+   ========================================================= */
+.icon {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 100%;
+}
+
+.modal {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px;
+  width: 400px;
+  padding: 15px;
+  display: none;
+}
+
+.modal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+
+.modal-main {
+  overflow: scroll;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mcart {
+  display: flex;
+  align-items: center;
+  width: 98%;
+  border: 1px solid black;
+  gap: 10px;
+  box-shadow: 0 2px 4px;
+}
+
+.mcart img {
+  width: 50%;
+  height: 100%;
+}
+
+.mcart > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.mbtn {
+  width: 100px;
+  font-size: 22px;
+  background-color: black;
+  color: white;
+}
+
+#closeCart {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+/* =========================================================
+   LESSON 12 PAGE  ( <main class="page"> )
+   Everything is scoped with .page so it can't break other blocks
+   ========================================================= */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+/* ---------- Sections ---------- */
+.page .section {
+  margin-top: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+}
+
+.page .section + .section {
+  margin-top: 40px; /* boshtukту ушул жерден өзгөртүңүз */
+}
+
+/* ---------- Titles ---------- */
+.page .title {
+  text-align: center;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page .subtitle {
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  margin-top: 10px;
+}
+
+/* ---------- Grid (overrides the main .grid above) ---------- */
+.page .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: none;
+  grid-auto-rows: auto;
+  gap: 4px;
+  margin: 24px 0 0;
+  width: 100%;
+}
+
+/* ---------- Photos ---------- */
+.page .photo {
+  display: block;
+  background-color: #d9d9d9;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-1 {
+  background-image: url("./png/a154a87611eb3797cc910105f8f4c5e29e9f59a8.jpg");
+}
+.img-2 {
+  background-image: url("./png/Group 31.png");
+}
+.img-3 {
+  background-image: url("./png/Group 32.png");
+}
+.img-4 {
+  background-image: url("./png/umm.png");
+}
+.img-5 {
+  background-image: url("./png/tuu.png");
+}
+.img-6 {
+  background-image: url("./png/123gold.png");
+}
+
+/* ---------- Top tiles ---------- */
+.page .tile {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.page .tile.overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45);
+  transition: background 0.3s;
+}
+
+.page .tile.overlay:hover::before {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.page .tile-text {
+  position: absolute;
+  inset: 0;
+  padding: 20px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page .tile-text h3 {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 6px;
+  margin-top: 10px;
+}
+
+.page .tile-text h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--red);
+}
+
+.page .tile-text p {
+  font-size: 0.72rem;
+  margin-top: 8px;
+  max-width: 170px;
+}
+
+/* ---------- Service cards ---------- */
+.page .card {
+  background: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  min-width: 0;
+  margin: 0;
+  overflow: visible;
+  aspect-ratio: auto;
+  transform: none;
+}
+
+.page .card.featured {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.page .card .photo {
+  width: 100%;
+  height: 220px;
+}
+
+.page .card-body {
+  padding: 14px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.page .card h3 {
+  color: var(--gold);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page .card p {
+  font-size: 0.78rem;
+  margin: 10px 0 18px;
+  flex: 1;
+}
+
+/* ---------- Buttons ---------- */
+.page .btn {
+  display: inline-block;
+  padding: 7px 24px;
+  font-family: var(--font);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--gold);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-variant: small-caps;
+  transition:
+    background 0.25s,
+    transform 0.25s;
+}
+
+.page .btn:hover {
+  background: #b08f45;
+  transform: translateY(-1px);
+}
+
+.page .btn.dark {
+  background: var(--dark);
+}
+
+.page .btn.dark:hover {
+  background: #000;
+}
+
+.page .btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .services__title {
+    font-size: 28px;
+  }
+
+  .services__subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .help__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .page .tile {
+    height: 160px;
+  }
+
+  .page .card .photo {
+    height: 160px;
+  }
+
+  .page .title {
+    font-size: 1.5rem;
+  }
+
+  .page .more-title {
+    margin-top: 60px;
+  }
 }

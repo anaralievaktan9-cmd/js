@@ -3,44 +3,315 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>123Gold - Wedding Rings</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
+    <!-- HEADER -->
     <header class="container header">
-        <div class="header-top">
-            <img src="./png/gold.png" alt="" class="logo" />
-            <div class="icons">
-                <img width="20"  src="./svg/calendar-lines (1).svg" alt="" />
-                <img width="20"  src="./svg/shopping-cart.svg" alt="" />
-                <img width="20" src="./svg/search.svg" alt="" />
+      <div class="header-top">
+        <img src="./png/gold.png" alt="123Gold logo" class="logo" />
+
+        <div class="icons">
+          <img width="20" src="./svg/calendar-lines (1).svg" alt="Calendar" />
+
+          <div class="icon">
+            <img
+              width="20"
+              src="./svg/shopping-cart.svg"
+              alt="Shopping cart"
+              id="open"
+            />
+
+            <div class="count" id="cart-count">0</div>
+
+            <!-- CART MODAL -->
+            <div class="modal">
+              <div class="modal-top">
+                <h2>корзина</h2>
+
+                <img
+                  width="30"
+                  src="https://www.help.cbp.gov/file-asset/CMS_Close_Button_Icon?oid=00Dt0000000LBIM&"
+                  alt="Close cart"
+                  id="close"
+                />
+              </div>
+
+              <!-- Товарлар бул жерге JS аркылуу чыгат -->
+              <div class="modal-main" id="cart-list"></div>
+
+              <button type="button" class="mbtn">Оформить заказ</button>
             </div>
+          </div>
+
+          <img width="20" src="./svg/search.svg" alt="Search" />
         </div>
-            <div class="header-bottom">
-        <a href="">Wedding rings</a>
-        <a href="">Engegement rings</a>
-        <a href="">Diamonds</a>
-        <a href="">>Memoire Rings</a>
-        <a href="">Jewerly</a>
-        <a href="">Contacts</a>
       </div>
+
+      <nav class="header-bottom">
+        <a href="#">Wedding rings</a>
+        <a href="#">Engagement rings</a>
+        <a href="#">Diamonds</a>
+        <a href="#">Memoire Rings</a>
+        <a href="#">Jewelry</a>
+        <a href="#">Contacts</a>
+      </nav>
     </header>
 
     <main>
-        <section class="baner">
-            <h1>For the most beautifuls</h1>
-            <button>Discover</button>
+      <!-- BANNER -->
+      <section class="baner">
+        <h1>For the most beautifuls</h1>
+        <button type="button">Discover</button>
+      </section>
+
+      <!-- GRID SECTION -->
+      <article class="container grid">
+        <div class="item1">
+          <div class="item1bacround">
+            <div class="text">
+              <p class="title">VALENTINE'S DAY</p>
+              <p>Brilliant gift ideas for special moments</p>
+              <p>123gold darling</p>
+            </div>
+          </div>
+
+          <span class="badge">-10%</span>
+          <button type="button">Көрүү</button>
+        </div>
+
+        <div class="item2"></div>
+
+        <div class="item3"></div>
+
+        <div class="item4">
+          <p class="title">VALENTINE'S DAY</p>
+          <p>Brilliant gift ideas for special moments.</p>
+          <p>123gold darling</p>
+        </div>
+
+        <div class="item5"></div>
+      </article>
+
+      <!-- CATEGORIES -->
+      <aside class="container">
+        <h2>categories</h2>
+
+        <div class="products">
+          <div class="cart">
+            <img src="" alt="Bestseller collection" />
+
+            <h3>BESTSELLER</h3>
+
+            <p>
+              Trendy models of our experts, for the love of your life selected
+            </p>
+
+            <button>Discover now</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- GOLD PRODUCT -->
+      <section class="gold">
+        <div class="cart">
+          <img src="" alt="Gold jewelry" />
+
+          <h3>123GOLD</h3>
+
+          <p>Gold 585 | 0,100 ct. | tw, si € 365,-</p>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="AND">
+        <section class="features">
+          <h2>Wedding rings and wedding bands in unique times</h2>
+
+          <div class="features-grid">
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+
+              <h3>Made in Germany</h3>
+
+              <p>Depending on the model, the delivery time is 2 to 5 weeks.</p>
+            </div>
+
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="9" cy="9" r="5" />
+                <circle cx="15" cy="15" r="5" />
+              </svg>
+
+              <h3>Advice for you!</h3>
+
+              <p>
+                Whether on-the-spot, over the phone, by chat or video
+                consultation. We look forward to you.
+              </p>
+            </div>
+
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 9l2-5h14l2 5" />
+                <path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0" />
+                <path d="M5 12v8h14v-8" />
+              </svg>
+
+              <h3>Order 24/7 at our Online Shop with the best advice.</h3>
+            </div>
+
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"
+                />
+              </svg>
+
+              <h3>
+                We manufacture individual pattern rings for you to try on.
+              </h3>
+            </div>
+
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="13" r="7" />
+                <path
+                  d="M12 10l1 2 2 .3-1.5 1.5.4 2-1.9-1-1.9 1 .4-2L9 12.3l2-.3z"
+                />
+                <path d="M10 3h4" />
+              </svg>
+
+              <h3>We offer the highest quality at the best price.</h3>
+            </div>
+
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 6h12v10H2z" />
+                <path d="M14 9h4l4 4v3h-8z" />
+                <circle cx="7" cy="18" r="2" />
+                <circle cx="17" cy="18" r="2" />
+              </svg>
+
+              <h3>
+                All orders are shipped directly to your home according to your
+                request.
+              </h3>
+            </div>
+          </div>
         </section>
+      </section>
 
-        <article class=" container grid">
-            <div class="item1"></div>
-            <div class="item2"></div>
-            <div class="item3"></div>
-            <div class="item4"></div>
-            <div class="item5"></div>
+      <!-- HELP SECTION -->
+        <main class="page">
+ 
+    <!-- Section 1 -->
+    <section class="section">
+      <h2 class="title">We are here for you!</h2>
+      <p class="subtitle">#Stay healthy</p>
+ 
+      <div class="grid">
+        <div class="tile photo img-1">
+          <div class="tile-text">
+            <h3>On-site consultation</h3>
+            <p>Arrange your consultation appointment. We look forward to seeing you</p>
+          </div>
+        </div>
+        <div class="tile photo img-2"></div>
+        <div class="tile photo img-3"></div>
+      </div>
+    </section>
+ 
+    <!-- Section 2 -->
+    <section class="section1">
+     <h2 class="title more-title">More Service</h2>
+      <p class="subtitle">Besides the Video guidance, we offer you a wide variety of unique services</p>
+ 
+      <div class="grid">
+        <article class="card featured">
+          <div class="photo img-4"></div>
+          <div class="card-body">
+            <h3>Ring sizes-service</h3>
+            <p>You get a choice of ring sizes-pattern sample to wear</p>
+            <a href="#" class="btn dark">Discover now</a>
+          </div>
         </article>
-
+ 
+        <article class="card">
+          <div class="photo img-5"></div>
+          <div class="card-body">
+            <h3>Individual patterns rings</h3>
+            <p>You can order to wear their wedding rings as a pattern for the Sample</p>
+            <a href="#" class="btn">Discover now</a>
+          </div>
+        </article>
+ 
+        <article class="card">
+          <div class="photo img-6"></div>
+          <div class="card-body">
+            <h3>Start@home</h3>
+            <p>You can start at home with the design of their wedding rings</p>
+            <a href="#" class="btn">Discover now</a>
+          </div>
+        </article>
+      </div>
+    </section>
+        
     </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="col">
+        <h4>FOLLOW US</h4>
+
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="#" class="social-icon" aria-label="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+
+          <a href="#" class="social-icon" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>WEDDING RING KNOW</h4>
+
+        <ul>
+          <li>Wedding rings</li>
+          <li>Engagement rings</li>
+          <li>Diamonds</li>
+          <li>Memoire Rings</li>
+          <li>Jewelry</li>
+          <li>Contacts</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h4>CONTACT</h4>
+
+        <div class="inputs">
+          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Phone" />
+        </div>
+
+        <button type="button">Send</button>
+      </div>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
